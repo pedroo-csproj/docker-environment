@@ -8,3 +8,10 @@ services:
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=!1- * sqlserverpass * -1!
+  postgresql:
+    container_name: postgresql
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=!1- * postgresqlpass * -1!
