@@ -15,3 +15,13 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_PASSWORD=!1- * postgresqlpass * -1!
+  mysql:
+    container_name: mysql
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=!1- * mysqlpass * -1!
+      - MYSQL_ROOT_PASSWORD=!1- * mysqlrootpass * -1!
